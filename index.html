@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maatru Mini</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <h1>Maatru Mini</h1>
+
+    <div class="card">
+      <h2>Tip of the Day</h2>
+      <p id="tip">Click below to receive a tip.</p>
+      <button onclick="showTip()">Get Tip</button>
+    </div>
+
+    <div class="card">
+      <h2>Trimester Guide & Foods</h2>
+      <select onchange="showTrimester(this.value)">
+        <option value="">Select Trimester</option>
+        <option value="1">1st Trimester (Weeks 1–12)</option>
+        <option value="2">2nd Trimester (Weeks 13–26)</option>
+        <option value="3">3rd Trimester (Weeks 27–40)</option>
+      </select>
+      <p id="trimester"></p>
+
+      <h3>Recommended Foods:</h3>
+      <ul id="food-list"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Pregnancy Calculator</h2>
+      <label for="lmp">Enter Last Menstrual Period (LMP):</label><br><br>
+      <input type="date" id="lmp" />
+      <br><br>
+      <button onclick="calculateDueDate()">Calculate</button>
+      <p id="calc-result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
